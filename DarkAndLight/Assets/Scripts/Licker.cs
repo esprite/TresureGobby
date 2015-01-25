@@ -50,7 +50,7 @@ public class Licker : MonoBehaviour {
 				}
 			}
 			else if (c.tag == "Obstacle") {
-				// transform.rigidbody2D.gravityScale = 0;
+				transform.rigidbody2D.gravityScale = 0;
 				// transform.collider2D.enabled  = false;
 			}
 		}

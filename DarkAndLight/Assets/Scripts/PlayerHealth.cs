@@ -28,6 +28,7 @@ public class PlayerHealth : MonoBehaviour
 	}
 
 
+
 	void OnCollisionEnter2D (Collision2D col)
 	{
 		if (col.gameObject.tag == "Enemy") 
@@ -43,7 +44,7 @@ public class PlayerHealth : MonoBehaviour
 				}
 			}
 		}
-		else if (col.gameObject.tag == "Obstacle") {
+		else if (col.gameObject.tag == "Wall" || col.gameObject.tag == "Obstacle") {
 
 		}
 		else

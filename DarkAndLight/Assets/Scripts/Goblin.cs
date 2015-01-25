@@ -15,7 +15,9 @@ public class Goblin : MonoBehaviour {
 	public GameObject hundredPointsUI;	// A prefab of 100 that appears when the enemy dies.
 	public float deathSpinMin = -100f;			// A value to give the minimum amount of Torque when dying
 	public float deathSpinMax = 100f;			// A value to give the maximum amount of Torque when dying
-	
+
+	bool grounded;
+
 	private SpriteRenderer ren;			// Reference to the sprite renderer.
 	private Transform frontCheck;		// Reference to the position of the gameobject used for checking if something is in front.
 	private bool dead = false;			// Whether or not the enemy is dead.
@@ -25,6 +27,7 @@ public class Goblin : MonoBehaviour {
 	{
 		// Setting up the references.
 		meactive = true;
+		grounded = true;
 		pc = GameObject.FindGameObjectWithTag("Player");
 		ren = transform.Find("body").GetComponent<SpriteRenderer>();
 		frontCheck = transform.Find("frontCheck").transform;
@@ -93,32 +96,34 @@ public class Goblin : MonoBehaviour {
 
 	void FixedUpdate ()
 	{
-		Collider2D[] frontHits = Physics2D.OverlapPointAll(frontCheck.position, 1);
+		Collider2D[] frontHits = Physics2D.OverlapPointAll(frontCheck.position, 0);
 
 		foreach (Collider2D c in frontHits) {
-						// If any of the colliders is an Obstacle...
 			if (c.tag == "Wall") {
-								// ... Flip the enemy and stop checking the other colliders.
 				Flip ();
 				break;
 			}
 			else if (c.tag == "Obstacle") {
-				// transform.rigidbody2D.gravityScale = 0;
-				// transform.collider2D.enabled  = false;
+				transform.rigidbody2D.gravityScale = 0;
+				grounded = true;
+			}
+			else if (c.tag == "Player" && Physics2D.GetIgnoreCollision(pc.GetComponent<CircleCollider2D>().collider2D, GetComponentsInParent<CircleCollider2D>()[0])) {
+
 			}
 		}
 
-		// Set the enemy's velocity to moveSpeed in the x direction.
-		if (pc != null && radiiOverlap() && pc.GetComponent<PlayerControl>().on) {	
-			meactive = !pc.GetComponent<PlayerControl>().on;
-			transform.collider2D.enabled = false;
-		} 
-		else {
-
+		if (pc != null && radiiOverlap() && pc.GetComponent<PlayerControl>().on && grounded) {	
+			meactive = false;
+			moveSpeed = 0f;
 		}
 
-		if (meactive) {	
-			rigidbody2D.velocity = new Vector2(transform.localScale.x * moveSpeed, rigidbody2D.velocity.y);
+		if (meactive)
+		{	
+			rigidbody2D.velocity = new Vector2 (transform.localScale.x * moveSpeed, rigidbody2D.velocity.y);
+		} 
+		else if (!meactive) 
+		{
+			Physics2D.IgnoreCollision(pc.GetComponent<CircleCollider2D>(), GetComponentsInParent<CircleCollider2D>()[0]);
 		}
 
 		// If the enemy has one hit point left and has a damagedEnemy sprite...
@@ -133,7 +138,7 @@ public class Goblin : MonoBehaviour {
 	}
 
 	public bool radiiOverlap() {
-		if (pc.transform.position.x - transform.position.x <= radius || pc.transform.position.x - transform.position.x >= radius) {
+		if (Mathf.Abs(pc.transform.position.x - transform.position.x) <= radius) {
 			return true;
 		}
 		return false;
