@@ -30,46 +30,41 @@ public class PlayerHealth : MonoBehaviour
 
 	void OnCollisionEnter2D (Collision2D col)
 	{
-		// If the colliding gameobject is an Enemy...
-		if(col.gameObject.tag == "Enemy")
+		if (col.gameObject.tag == "Enemy") 
 		{
-			// ... and if the time exceeds the time of the last hit plus the time between hits...
-			if (Time.time > lastHitTime + repeatDamagePeriod) 
+			if (col.gameObject.GetComponent<Goblin>().meactive) 
 			{
-				// ... and if the player still has health...
-				if(health > 0f)
-				{
-					// ... take damage and reset the lastHitTime.
-					TakeDamage(col.transform); 
-					lastHitTime = Time.time; 
-				}
-				// If the player doesn't have health, do some stuff, let him fall into the river to reload the level.
-				else
-				{
-					// Find all of the colliders on the gameobject and set them all to be triggers.
-					Collider2D[] cols = GetComponents<Collider2D>();
-					foreach(Collider2D c in cols)
-					{
-						c.isTrigger = true;
+				if (Time.time > lastHitTime + repeatDamagePeriod)
+				{	
+					if (health > 0f) {
+						TakeDamage (col.transform); 
+						lastHitTime = Time.time; 
 					}
-
-					// Move all sprite parts of the player to the front
-					SpriteRenderer[] spr = GetComponentsInChildren<SpriteRenderer>();
-					foreach(SpriteRenderer s in spr)
-					{
-						s.sortingLayerName = "UI";
-					}
-
-					// ... disable user Player Control script
-					GetComponent<PlayerControl>().enabled = false;
-
-					// ... disable the Gun script to stop a dead guy shooting a nonexistant bazooka
-					GetComponentInChildren<Gun>().enabled = false;
-
-					// ... Trigger the 'Die' animation state
-					anim.SetTrigger("Die");
 				}
 			}
+		}
+		else if (col.gameObject.tag == "Obstacle") {
+
+		}
+		else
+		{
+			Collider2D[] cols = GetComponents<Collider2D>();
+			foreach(Collider2D c in cols)
+			{
+				c.isTrigger = true;
+			}
+
+			SpriteRenderer[] spr = GetComponentsInChildren<SpriteRenderer>();
+			foreach(SpriteRenderer s in spr)
+			{
+				s.sortingLayerName = "UI";
+			}
+
+			GetComponent<PlayerControl>().enabled = false;
+
+			// GetComponentInChildren<Gun>().enabled = false;
+
+			anim.SetTrigger("Die");
 		}
 	}
 
@@ -97,7 +92,7 @@ public class PlayerHealth : MonoBehaviour
 	}
 
 
-	public void UpdateHealthBar ()
+	public void UpdateHealthBar()
 	{
 		// Set the health bar's colour to proportion of the way between green and red based on the player's health.
 		healthBar.material.color = Color.Lerp(Color.green, Color.red, 1 - health * 0.01f);

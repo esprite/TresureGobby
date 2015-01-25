@@ -44,7 +44,7 @@ GameObject:
   - 58: {fileID: 5800000}
   - 95: {fileID: 9500000}
   m_Layer: 10
-  m_Name: enemy2
+  m_Name: enemy3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,11 +137,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 100006}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6a901c522dd84249aec9e9b95bda104, type: 3}
+  m_Script: {fileID: 11500000, guid: 338618fa1b51845588853f97f51b0c0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meactive: 1
-  pc: {fileID: 0}
   moveSpeed: 5
   HP: 2
   deadEnemy: {fileID: 21300000, guid: 73fa5f80d4ddd4196b767cc01c1b5c68, type: 3}
@@ -153,6 +151,7 @@ MonoBehaviour:
   hundredPointsUI: {fileID: 100006, guid: 31974361bc9e44fb18c77b64a4cb3bbd, type: 2}
   deathSpinMin: -100
   deathSpinMax: 100
+  goingToAttack: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

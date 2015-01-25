@@ -67,7 +67,7 @@ public class Bomb : MonoBehaviour
 			if(rb != null && rb.tag == "Enemy")
 			{
 				// Find the Enemy script and set the enemy's health to zero.
-				rb.gameObject.GetComponent<Enemy>().HP = 0;
+				rb.gameObject.GetComponent<Goblin>().HP = 0;
 
 				// Find a vector from the bomb to the enemy.
 				Vector3 deltaPos = rb.transform.position - transform.position;
