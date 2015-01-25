@@ -35,16 +35,23 @@ public class Licker : MonoBehaviour {
 	{
 		// Create an array of all the colliders in front of the enemy.
 		Collider2D[] frontHits = Physics2D.OverlapPointAll(frontCheck.position, 1);
-		if (pc.GetComponent<PlayerControl>().on && Input)
+		if (pc.GetComponent<PlayerControl> ().on && pc.GetComponent<PlayerControl> ().moving) {
+			goingToAttack = true;
+		}
 
 		// Check each of the colliders.
 		foreach(Collider2D c in frontHits)
 		{
 			// If any of the colliders is an Obstacle...
-			if(c.tag == "Obstacle")
+			if(c.tag == "Wall")
 			{
-				Death();
-				break;
+				if (pc.transform.position.x > transform.position.x) {
+					Death();
+				}
+			}
+			else if (c.tag == "Obstacle") {
+				// transform.rigidbody2D.gravityScale = 0;
+				// transform.collider2D.enabled  = false;
 			}
 		}
 		

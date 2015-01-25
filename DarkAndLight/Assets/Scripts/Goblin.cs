@@ -97,10 +97,14 @@ public class Goblin : MonoBehaviour {
 
 		foreach (Collider2D c in frontHits) {
 						// If any of the colliders is an Obstacle...
-			if (c.tag == "Obstacle") {
+			if (c.tag == "Wall") {
 								// ... Flip the enemy and stop checking the other colliders.
 				Flip ();
 				break;
+			}
+			else if (c.tag == "Obstacle") {
+				// transform.rigidbody2D.gravityScale = 0;
+				// transform.collider2D.enabled  = false;
 			}
 		}
 

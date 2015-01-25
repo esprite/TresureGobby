@@ -109,7 +109,7 @@ CircleCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Radius: .5
@@ -151,6 +151,7 @@ MonoBehaviour:
   hundredPointsUI: {fileID: 100006, guid: 31974361bc9e44fb18c77b64a4cb3bbd, type: 2}
   deathSpinMin: -100
   deathSpinMax: 100
+  pc: {fileID: 0}
   goingToAttack: 0
 --- !u!212 &21200000
 SpriteRenderer:

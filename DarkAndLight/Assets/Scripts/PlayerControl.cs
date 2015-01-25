@@ -24,7 +24,7 @@ public class PlayerControl : MonoBehaviour
 	private bool grounded = false;			// Whether or not the player is grounded.
 	private Animator anim;					// Reference to the player's animator component.
 
-	private bool moving = false;
+	public bool moving = false;
 
 	void Awake()
 	{
@@ -46,7 +46,7 @@ public class PlayerControl : MonoBehaviour
 			string status = on ? "Light is ON." : "Light is OFF.";
 			Debug.Log (status);
 		}
-		moving = Input.GetButtonDown ("Right") || Input.GetButtonDown ("Left");
+		moving = Input.GetKey (KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow);
 	}
 
 	void FixedUpdate ()
