@@ -43,7 +43,6 @@ GameObject:
   - 114: {fileID: 11400000}
   - 58: {fileID: 5800000}
   - 95: {fileID: 9500000}
-  - 61: {fileID: 6193590}
   m_Layer: 10
   m_Name: enemy3
   m_TagString: Enemy
@@ -115,17 +114,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_Radius: .5
   m_Center: {x: 0, y: .300000012}
---- !u!61 &6193590
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100006}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: .600000024, y: .566067696}
-  m_Center: {x: 0, y: .180000007}
 --- !u!95 &9500000
 Animator:
   serializedVersion: 3

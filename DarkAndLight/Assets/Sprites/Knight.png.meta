@@ -1,0 +1,146 @@
+fileFormatVersion: 2
+guid: ac7543e1bc249664f823979fe026ac85
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Knight_Body
+    21300002: Knight_Leg
+    21300004: Knight_R
+    21300006: Knight_Shield
+    21300008: Knight_Sword
+    21300010: Knight_5
+    21300012: Knight_6
+    21300014: Knight_L
+    21300016: Knight_Hal
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Knight_Body
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112
+        width: 918
+        height: 1825
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Knight_Leg
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 584
+        width: 576
+        height: 1310
+      alignment: 9
+      pivot: {x: .284511775, y: .868468225}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Knight_R
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 1178
+        width: 812
+        height: 848
+      alignment: 9
+      pivot: {x: .255426109, y: .798970938}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Knight_Shield
+      rect:
+        serializedVersion: 2
+        x: 2808
+        y: 1118
+        width: 748
+        height: 930
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Knight_Sword
+      rect:
+        serializedVersion: 2
+        x: 3614
+        y: 78
+        width: 472
+        height: 1779
+      alignment: 9
+      pivot: {x: .4707807, y: .144947127}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Knight_5
+      rect:
+        serializedVersion: 2
+        x: 4086
+        y: 898
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Knight_6
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 0
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Knight_L
+      rect:
+        serializedVersion: 2
+        x: 1869
+        y: 566
+        width: 1158
+        height: 618
+      alignment: 9
+      pivot: {x: .145093635, y: .772254348}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Knight_Hal
+      rect:
+        serializedVersion: 2
+        x: 2029
+        y: 6
+        width: 1442
+        height: 546
+      alignment: 9
+      pivot: {x: .404360205, y: .42422387}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

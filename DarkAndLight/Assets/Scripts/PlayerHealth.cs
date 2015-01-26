@@ -28,44 +28,14 @@ public class PlayerHealth : MonoBehaviour
 	}
 
 
-
 	void OnCollisionEnter2D (Collision2D col)
 	{
-		if (col.gameObject.tag == "Enemy") 
+		// If the colliding gameobject is an Enemy...
+		if(col.gameObject.tag == "Enemy")
 		{
-			if (col.gameObject.GetComponent<Goblin>().meactive) 
-			{
-				if (Time.time > lastHitTime + repeatDamagePeriod)
-				{	
-					if (health > 0f) {
-						TakeDamage (col.transform); 
-						lastHitTime = Time.time; 
-					}
-				}
+			if(col.gameObject.name == "LickerRoot") {
+				health = 0f;
 			}
-		}
-		else if (col.gameObject.tag == "Wall" || col.gameObject.tag == "Obstacle") {
-
-		}
-		else
-		{
-			Collider2D[] cols = GetComponents<Collider2D>();
-			foreach(Collider2D c in cols)
-			{
-				c.isTrigger = true;
-			}
-
-			SpriteRenderer[] spr = GetComponentsInChildren<SpriteRenderer>();
-			foreach(SpriteRenderer s in spr)
-			{
-				s.sortingLayerName = "UI";
-			}
-
-			GetComponent<PlayerControl>().enabled = false;
-
-			// GetComponentInChildren<Gun>().enabled = false;
-
-			anim.SetTrigger("Die");
 		}
 	}
 
@@ -93,7 +63,7 @@ public class PlayerHealth : MonoBehaviour
 	}
 
 
-	public void UpdateHealthBar()
+	public void UpdateHealthBar ()
 	{
 		// Set the health bar's colour to proportion of the way between green and red based on the player's health.
 		healthBar.material.color = Color.Lerp(Color.green, Color.red, 1 - health * 0.01f);

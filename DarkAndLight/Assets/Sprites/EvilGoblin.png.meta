@@ -1,0 +1,149 @@
+fileFormatVersion: 2
+guid: 47f50b05fafbd0d4ca9ffcc61a3096cf
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Round Shield
+    21300002: Square Shield
+    21300004: EvilGoblin_Body
+    21300006: EvilGoblin_Leg
+    21300008: EvilGoblin_ArmL
+    21300010: EvilGoblin_ArmL
+    21300012: Axe
+    21300014: ShortSword
+    21300016: Mace
+    21300018: CircleShield
+    21300020: SquareShield
+    21300022: EvilGoblin_R
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: CircleShield
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 1560
+        width: 396
+        height: 432
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SquareShield
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 1475
+        width: 528
+        height: 536
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: EvilGoblin_Body
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 683
+        width: 478
+        height: 765
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: EvilGoblin_Leg
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 1031
+        width: 202
+        height: 332
+      alignment: 9
+      pivot: {x: .237754896, y: .839929044}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: EvilGoblin_R
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 1015
+        width: 305
+        height: 337
+      alignment: 9
+      pivot: {x: .530205786, y: .848554552}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: EvilGoblin_ArmL
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 1073
+        width: 390
+        height: 216
+      alignment: 9
+      pivot: {x: .133851036, y: .76657331}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Axe
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 183
+        width: 403
+        height: 351
+      alignment: 9
+      pivot: {x: .277110279, y: .335954547}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ShortSword
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 101
+        width: 364
+        height: 432
+      alignment: 9
+      pivot: {x: .221592158, y: .185443282}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mace
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 103
+        width: 314
+        height: 361
+      alignment: 9
+      pivot: {x: .26527977, y: .27031827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

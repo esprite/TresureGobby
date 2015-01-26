@@ -2103,7 +2103,11 @@ Prefab:
     - target: {fileID: 11400000, guid: bdd88e3de6e024ec1bacd58073808d06, type: 2}
       propertyPath: enemies.Array.data[1]
       value: 
-      objectReference: {fileID: 100000, guid: 3d8841b3e8d11467c87964698941f2d8, type: 2}
+      objectReference: {fileID: 100006, guid: 791d5a274465a4f269a6232cc2eb2fea, type: 2}
+    - target: {fileID: 11400000, guid: bdd88e3de6e024ec1bacd58073808d06, type: 2}
+      propertyPath: enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 100000, guid: 4c5736ea0764d49c3a6adc2250d33f0f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bdd88e3de6e024ec1bacd58073808d06, type: 2}
   m_RootGameObject: {fileID: 1049173827}
@@ -4392,7 +4396,7 @@ MonoBehaviour:
   spawnDelay: 2
   enemies:
   - {fileID: 100000, guid: 4c5736ea0764d49c3a6adc2250d33f0f, type: 2}
-  - {fileID: 100000, guid: 3d8841b3e8d11467c87964698941f2d8, type: 2}
+  - {fileID: 100006, guid: 791d5a274465a4f269a6232cc2eb2fea, type: 2}
 --- !u!4 &1035144488
 Transform:
   m_ObjectHideFlags: 0
@@ -4602,7 +4606,7 @@ MonoBehaviour:
   spawnDelay: 2
   enemies:
   - {fileID: 100000, guid: 4c5736ea0764d49c3a6adc2250d33f0f, type: 2}
-  - {fileID: 100000, guid: 3d8841b3e8d11467c87964698941f2d8, type: 2}
+  - {fileID: 100006, guid: 791d5a274465a4f269a6232cc2eb2fea, type: 2}
 --- !u!4 &1049173829
 Transform:
   m_ObjectHideFlags: 0
@@ -7895,7 +7899,7 @@ MonoBehaviour:
   spawnDelay: 2
   enemies:
   - {fileID: 100000, guid: 4c5736ea0764d49c3a6adc2250d33f0f, type: 2}
-  - {fileID: 100000, guid: 3d8841b3e8d11467c87964698941f2d8, type: 2}
+  - {fileID: 100006, guid: 791d5a274465a4f269a6232cc2eb2fea, type: 2}
 --- !u!4 &1556087194
 Transform:
   m_ObjectHideFlags: 0
@@ -7967,11 +7971,15 @@ Prefab:
     - target: {fileID: 11400000, guid: bdd88e3de6e024ec1bacd58073808d06, type: 2}
       propertyPath: enemies.Array.data[1]
       value: 
-      objectReference: {fileID: 100000, guid: 3d8841b3e8d11467c87964698941f2d8, type: 2}
+      objectReference: {fileID: 100006, guid: 791d5a274465a4f269a6232cc2eb2fea, type: 2}
     - target: {fileID: 400000, guid: bdd88e3de6e024ec1bacd58073808d06, type: 2}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: bdd88e3de6e024ec1bacd58073808d06, type: 2}
+      propertyPath: enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 100000, guid: 4c5736ea0764d49c3a6adc2250d33f0f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bdd88e3de6e024ec1bacd58073808d06, type: 2}
   m_RootGameObject: {fileID: 1035144486}
@@ -8138,7 +8146,8 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6100000, guid: 6aa187bc6339843479c03fdfd71404a3, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6aa187bc6339843479c03fdfd71404a3, type: 2}
   m_RootGameObject: {fileID: 2086931158}
   m_IsPrefabParent: 0
@@ -8372,11 +8381,15 @@ Prefab:
     - target: {fileID: 11400000, guid: bdd88e3de6e024ec1bacd58073808d06, type: 2}
       propertyPath: enemies.Array.data[1]
       value: 
-      objectReference: {fileID: 100000, guid: 3d8841b3e8d11467c87964698941f2d8, type: 2}
+      objectReference: {fileID: 100006, guid: 791d5a274465a4f269a6232cc2eb2fea, type: 2}
     - target: {fileID: 400000, guid: bdd88e3de6e024ec1bacd58073808d06, type: 2}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: bdd88e3de6e024ec1bacd58073808d06, type: 2}
+      propertyPath: enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 100000, guid: 4c5736ea0764d49c3a6adc2250d33f0f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bdd88e3de6e024ec1bacd58073808d06, type: 2}
   m_RootGameObject: {fileID: 1556087192}
@@ -8841,7 +8854,6 @@ GameObject:
   - 4: {fileID: 2086931159}
   - 114: {fileID: 2086931165}
   - 50: {fileID: 2086931164}
-  - 61: {fileID: 2086931163}
   - 58: {fileID: 2086931162}
   - 95: {fileID: 2086931161}
   - 114: {fileID: 2086931160}
@@ -8909,7 +8921,7 @@ Animator:
   m_GameObject: {fileID: 2086931158}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1ad1c509ffb314b2b933a73b401aae26, type: 2}
+  m_Controller: {fileID: 9100000, guid: ebf9eb918b2b3e94384f78285aff2ee6, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 1
   m_ApplyRootMotion: 0
@@ -8927,18 +8939,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_Radius: .370000005
   m_Center: {x: 0, y: -.449999988}
---- !u!61 &2086931163
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6100000, guid: 6aa187bc6339843479c03fdfd71404a3,
-    type: 2}
-  m_PrefabInternal: {fileID: 1744304060}
-  m_GameObject: {fileID: 2086931158}
-  m_Enabled: 0
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: .610000014, y: 1.16999996}
-  m_Center: {x: 0, y: 0}
 --- !u!50 &2086931164
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -8987,7 +8987,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ddd0ca15e5d0a42b98f08337c1690bb1, type: 3}
   tauntProbability: 50
   tauntDelay: 1
-  radius: 1
   on: 1
   moving: 0
 --- !u!114 &2086931167

@@ -28,7 +28,7 @@ public class Rocket : MonoBehaviour
 		if(col.tag == "Enemy")
 		{
 			// ... find the Enemy script and call the Hurt function.
-			col.gameObject.GetComponent<Goblin>().Hurt();
+			col.gameObject.GetComponent<Enemy>().Hurt();
 
 			// Call the explosion instantiation.
 			OnExplode();

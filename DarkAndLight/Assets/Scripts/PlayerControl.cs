@@ -8,6 +8,7 @@ public class PlayerControl : MonoBehaviour
 	[HideInInspector]
 	public bool jump = false;				// Condition for whether the player should jump.
 
+
 	public float moveForce = 365f;			// Amount of force added to move the player left and right.
 	public float maxSpeed = 5f;				// The fastest the player can travel in the x axis.
 	public AudioClip[] jumpClips;			// Array of clips for when the player jumps.
@@ -16,19 +17,20 @@ public class PlayerControl : MonoBehaviour
 	public float tauntProbability = 50f;	// Chance of a taunt happening.
 	public float tauntDelay = 1f;			// Delay for when the taunt should happen.
 
-	public float radius = 1.0f;
-	public bool on = true;
+	public bool on;
+	public bool moving;
 
 	private int tauntIndex;					// The index of the taunts array indicating the most recent taunt.
 	private Transform groundCheck;			// A position marking where to check if the player is grounded.
-	private bool grounded = false;			// Whether or not the player is grounded.
+	// private bool grounded = false;			// Whether or not the player is grounded.
 	private Animator anim;					// Reference to the player's animator component.
 
-	public bool moving = false;
 
 	void Awake()
 	{
 		// Setting up references.
+		on = true;
+		moving = false;
 		groundCheck = transform.Find("groundCheck");
 		anim = GetComponent<Animator>();
 	}
@@ -37,17 +39,16 @@ public class PlayerControl : MonoBehaviour
 	void Update()
 	{
 		// The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
-		grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));  
+		// grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));  
+
 		// If the jump button is pressed and the player is grounded then the player should jump.
-		if(Input.GetButtonDown("Jump") && grounded)
-			jump = true;
-		if (Input.GetButtonDown ("Fire1")) {
-			on = !on;
-			string status = on ? "Light is ON." : "Light is OFF.";
-			Debug.Log (status);
-		}
-		moving = Input.GetKey (KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow);
+		if (Input.GetButtonDown ("Fire1"))
+						on = !on;
+		moving = (Input.GetKey (KeyCode.LeftArrow) || Input.GetKey (KeyCode.RightArrow));
+		GameObject.Find("Gobby/rightArm/Lantern/Point light").light.enabled = on;
+		GameObject.Find("Gobby/rightArm/Lantern/Point light/Point light").light.enabled = on;
 	}
+
 
 	void FixedUpdate ()
 	{
@@ -99,7 +100,7 @@ public class PlayerControl : MonoBehaviour
 	{
 		// Switch the way the player is labelled as facing.
 		facingRight = !facingRight;
-		Global.facingRight = !Global.facingRight;
+
 		// Multiply the player's x local scale by -1.
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;

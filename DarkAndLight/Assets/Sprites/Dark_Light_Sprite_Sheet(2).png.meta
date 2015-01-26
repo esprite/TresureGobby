@@ -1,0 +1,168 @@
+fileFormatVersion: 2
+guid: 9821792387157e3488079136c57e412a
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Dark_Light_Sprite_Sheet(2)_0
+    21300002: Dark_Light_Sprite_Sheet(2)_1
+    21300004: Dark_Light_Sprite_Sheet(2)_2
+    21300006: Dark_Light_Sprite_Sheet(2)_3
+    21300008: Dark_Light_Sprite_Sheet(2)_4
+    21300010: Dark_Light_Sprite_Sheet(2)_5
+    21300012: Dark_Light_Sprite_Sheet(2)_6
+    21300014: Dark_Light_Sprite_Sheet(2)_7
+    21300016: Dark_Light_Sprite_Sheet(2)_8
+    21300018: Dark_Light_Sprite_Sheet(2)_9
+    21300020: Dark_Light_Sprite_Sheet(2)_10
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Dark_Light_Sprite_Sheet(2)_0
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 1018
+        width: 509
+        height: 902
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dark_Light_Sprite_Sheet(2)_1
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 1583
+        width: 657
+        height: 438
+      alignment: 9
+      pivot: {x: .4193708, y: .226561382}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dark_Light_Sprite_Sheet(2)_2
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 789
+        width: 518
+        height: 692
+      alignment: 9
+      pivot: {x: .144542083, y: .906363249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dark_Light_Sprite_Sheet(2)_3
+      rect:
+        serializedVersion: 2
+        x: 1503
+        y: 847
+        width: 382
+        height: 626
+      alignment: 9
+      pivot: {x: .596469104, y: .742828667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dark_Light_Sprite_Sheet(2)_4
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 31
+        width: 520
+        height: 694
+      alignment: 9
+      pivot: {x: .152621582, y: .902256608}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dark_Light_Sprite_Sheet(2)_5
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 79
+        width: 220
+        height: 488
+      alignment: 9
+      pivot: {x: .529665887, y: .93204999}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dark_Light_Sprite_Sheet(2)_6
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 27
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dark_Light_Sprite_Sheet(2)_7
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 23
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dark_Light_Sprite_Sheet(2)_8
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 24
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dark_Light_Sprite_Sheet(2)_9
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 23
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dark_Light_Sprite_Sheet(2)_10
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 24
+        width: 594
+        height: 836
+      alignment: 9
+      pivot: {x: .164302498, y: .898471951}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

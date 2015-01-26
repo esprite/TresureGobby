@@ -1,0 +1,102 @@
+fileFormatVersion: 2
+guid: 65d388a9038900345957b81a5b20b54d
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Licker_Head
+    21300002: Licker_Body
+    21300004: Licker_2
+    21300006: Licker_Leg
+    21300008: Licker_HeadLicking
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Licker_Head
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1184
+        width: 486
+        height: 777
+      alignment: 9
+      pivot: {x: .898083091, y: .47925055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Licker_Body
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 1103
+        width: 953
+        height: 892
+      alignment: 9
+      pivot: {x: .27523908, y: .518074214}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Licker_2
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 629
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Licker_Leg
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 71
+        width: 756
+        height: 854
+      alignment: 9
+      pivot: {x: .320253253, y: .842512369}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Licker_HeadLicking
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 29
+        width: 801
+        height: 932
+      alignment: 9
+      pivot: {x: .880624354, y: .497728586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

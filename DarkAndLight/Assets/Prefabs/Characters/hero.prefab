@@ -319,7 +319,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.3274231, y: 3.05689144, z: 0}
+  m_LocalPosition: {x: -17.3274231, y: 3.05689144, z: -1}
   m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 1.20000005}
   m_Children:
   - {fileID: 400026}
@@ -604,7 +604,7 @@ Animator:
   m_GameObject: {fileID: 100020}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1ad1c509ffb314b2b933a73b401aae26, type: 2}
+  m_Controller: {fileID: 9100000, guid: ebf9eb918b2b3e94384f78285aff2ee6, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 1
   m_ApplyRootMotion: 0
@@ -654,7 +654,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ddd0ca15e5d0a42b98f08337c1690bb1, type: 3}
   tauntProbability: 50
   tauntDelay: 1
-  radius: 1
   on: 1
   moving: 0
 --- !u!114 &11400004

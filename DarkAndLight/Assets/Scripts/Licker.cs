@@ -13,6 +13,8 @@ public class Licker : MonoBehaviour {
 
 	public GameObject pc;
 
+	private Animator anim;
+
 	public bool goingToAttack = false;
 
 	private SpriteRenderer ren;			// Reference to the sprite renderer.
@@ -23,21 +25,26 @@ public class Licker : MonoBehaviour {
 	
 	void Awake()
 	{
+
 		// Setting up the references.
 		pc = GameObject.FindGameObjectWithTag("Player");
-		ren = transform.Find("body").GetComponent<SpriteRenderer>();
-		frontCheck = transform.Find("frontCheck").transform;
-		score = GameObject.Find("Score").GetComponent<Score>();
-		moveSpeed *= -1.0f;
+		anim = GetComponent<Animator>();
+		// ren = transform.Find("LickerRoot").GetComponent<SpriteRenderer>();
+		frontCheck = transform;
+		// score = GameObject.Find("Score").GetComponent<Score>();
+		anim.SetTrigger("Walking");
+		moveSpeed = -2.0f;
 	}
 	
 	void FixedUpdate ()
 	{
 		// Create an array of all the colliders in front of the enemy.
 		Collider2D[] frontHits = Physics2D.OverlapPointAll(frontCheck.position, 1);
-		if (pc.GetComponent<PlayerControl> ().on && pc.GetComponent<PlayerControl> ().moving) {
-			goingToAttack = true;
-		}
+		goingToAttack = (pc.GetComponent<PlayerControl>().on || pc.GetComponent<PlayerControl>().moving);
+
+		moveSpeed = goingToAttack ? -2.5f : -2f;
+
+		collider2D.enabled = goingToAttack;
 
 		// Check each of the colliders.
 		foreach(Collider2D c in frontHits)
@@ -51,17 +58,25 @@ public class Licker : MonoBehaviour {
 			}
 			else if (c.tag == "Obstacle") {
 				transform.rigidbody2D.gravityScale = 0;
-				// transform.collider2D.enabled  = false;
 			}
 		}
-		
+
+		if (goingToAttack) {
+			anim.SetTrigger ("Attack");		
+		} 
+		else if (!goingToAttack) {
+			anim.SetTrigger ("Walking");
+		}
+
 		// Set the enemy's velocity to moveSpeed in the x direction.
+
 		rigidbody2D.velocity = new Vector2(transform.localScale.x * moveSpeed, rigidbody2D.velocity.y);	
-		
+
+
 		// If the enemy has one hit point left and has a damagedEnemy sprite...
 		if(HP == 1 && damagedEnemy != null)
 			// ... set the sprite renderer's sprite to be the damagedEnemy sprite.
-			ren.sprite = damagedEnemy;
+			// ren.sprite = damagedEnemy;
 		
 		// If the enemy has zero or fewer hit points and isn't dead yet...
 		if(HP <= 0 && !dead)
@@ -87,8 +102,8 @@ public class Licker : MonoBehaviour {
 		}
 		
 		// Re-enable the main sprite renderer and set it's sprite to the deadEnemy sprite.
-		ren.enabled = true;
-		ren.sprite = deadEnemy;
+		// ren.enabled = true;
+		// ren.sprite = deadEnemy;
 		
 		// Increase the score by 100 points
 		score.score += 100;
